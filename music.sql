@@ -79,6 +79,27 @@ CREATE TABLE songs_artists
 );
 
 
+INSERT INTO songs_artists
+  (songs_id, artists_id)
+VALUES
+  (1,1),
+  (2,2),
+  (3,3),
+  (3,4),
+  (4,5),
+  (4,6),
+  (5,7),
+  (6,8),
+  (6,9),
+  (7,10),
+  (7,11),
+  (8,12), 
+  (8,13), 
+  (9,14),
+  (10,15);
+
+
+
 CREATE TABLE producers 
 (
   id SERIAL PRIMARY KEY,
@@ -90,7 +111,7 @@ INSERT INTO producers
   (producer_name)
 VALUES
   ('Dust Brothers'),
-  ('Stephen Lironi"}'),
+  ('Stephen Lironi'),
   ('Roy Thomas Baker'),
   ('Walter Afanasieff'),
   ('Benjamin Rice'),
@@ -108,5 +129,23 @@ CREATE TABLE songs_producers
     id SERIAL PRIMARY KEY,
     songs_id INTEGER REFERENCES songs,
     producers_id INTEGER REFERENCES producers
-);  
+); 
+
+
+INSERT INTO songs_producers
+  (songs_id, producers_id)
+VALUES
+  (1,1),
+  (1,2),
+  (2,3),
+  (3,4),
+  (4,5),
+  (5,6),
+  (6,7),
+  (7,8),
+  (7,9),
+  (8,10),
+  (8,11),  
+  (9,12),
+  (10,13);
 
